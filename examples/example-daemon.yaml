@@ -5,3 +5,4 @@ metadata:
 spec:
   deploymentName: example-daemon
   replicas: 1
+  hello: hello

@@ -326,6 +326,7 @@ func (c *Controller) updateFooStatus(daemon *samplev1alpha1.Daemon, deployment *
 	// Or create a copy manually for better performance
 	fooCopy := daemon.DeepCopy()
 	fooCopy.Status.AvailableReplicas = deployment.Status.AvailableReplicas
+	fooCopy.Spec.Hello = "Hello World"
 	// If the CustomResourceSubresources feature gate is not enabled,
 	// we must use Update instead of UpdateStatus to update the Status block of the Foo resource.
 	// UpdateStatus will not allow changes to the Spec of the resource,
