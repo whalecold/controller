@@ -1,0 +1,7 @@
+apiVersion: mycontroller.k8s.io/v1alpha1
+kind: Daemon
+metadata:
+  name: example-daemon
+spec:
+  deploymentName: example-daemon
+  replicas: 1
